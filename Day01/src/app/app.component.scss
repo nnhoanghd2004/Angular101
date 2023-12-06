@@ -1,0 +1,39 @@
+.backgr {
+    height: 100vh;
+    width: 100vw;
+}
+label {
+}
+.wrap-input {
+    width: 100%;
+    margin-top: 24px;
+    display: flex;
+    flex-direction: column;
+}
+.container {
+    width: 400px;
+    height: 400px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #18181b;
+    padding: 30px;
+    border-radius: 10px;
+}
+.topbar {
+    display: flex;
+    width: 100%;
+    padding-bottom: 4px;
+    border-bottom: gray 2px solid;
+}
+.topbar-item {
+    margin-right: 12px;
+}
+#btn-login {
+    margin-top: 24px;
+    width: 50%;
+    height: 32px;
+    border-radius: 12px;
+    color: #000;
+}
