@@ -1,0 +1,10 @@
+[
+    {
+        "firstName": "Hoang",
+        "lastName" : "Nguyen",
+        "phoneNumber" : "123",
+        "password" : "123",
+        "address" : "TP.HCM",
+        "imgLink" : "../../../assets/pictures/ava.jpg"
+    }
+]

@@ -1,15 +1,18 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { RouterOutlet } from '@angular/router';
-import { ContentComponent } from './content/content.component';
+import { Router, RouterOutlet } from '@angular/router';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [CommonModule, RouterOutlet, ContentComponent],
-  templateUrl: './app.component.html',
+  imports: [CommonModule, RouterOutlet],
+  template: ` <router-outlet> </router-outlet> `,
   styleUrl: './app.component.scss',
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
+  constructor(private router: Router) {}
+  ngOnInit(): void {
+    this.router.navigate(['/Home']);
+  }
   title = 'Day02';
 }

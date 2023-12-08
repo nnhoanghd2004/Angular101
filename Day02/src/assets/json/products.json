@@ -1,0 +1,43 @@
+[
+    {
+        "id" : "1",
+        "imgLink" : "../../../assets/pictures/croissants-table.jpg",
+        "name" : "Banh 1",
+        "materials" : "Materials",
+        "price" : "100"
+    },
+    {
+        "id" : "2",
+        "imgLink" : "../../../assets/pictures/french-colorful-macarons-white-background.jpg",
+        "name" : "Banh 2",
+        "materials" : "Materials",
+        "price" : "100"
+    },
+    {
+        "id" : "3",
+        "imgLink" : "../../../assets/pictures/slice-appetizing-strawberry-cake.jpg",
+        "name" : "Banh 3",
+        "materials" : "Materials",
+        "price" : "100"
+    },{
+        "id" : "4",
+        "imgLink" : "../../../assets/pictures/croissants-table.jpg",
+        "name" : "Banh 1",
+        "materials" : "Materials",
+        "price" : "100"
+    },
+    {
+        "id" : "5",
+        "imgLink" : "../../../assets/pictures/french-colorful-macarons-white-background.jpg",
+        "name" : "Banh 2",
+        "materials" : "Materials",
+        "price" : "100"
+    },
+    {
+        "id" : "6",
+        "imgLink" : "../../../assets/pictures/slice-appetizing-strawberry-cake.jpg",
+        "name" : "Banh 3",
+        "materials" : "Materials",
+        "price" : "100"
+    }
+]

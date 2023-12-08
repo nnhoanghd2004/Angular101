@@ -1,0 +1,26 @@
+$primary-color1: #070707;
+$primary-color2: #4e4e4e;
+$primary-color3: #9c9c9c;
+$primary-color4: #dbdbdb;
+$primary-color5: #f1f1f1;
+
+@font-face {
+    font-family: "NoyhR-SemiLight";
+    src: url("../assets/fonts/NoyhR-SemiLight.woff") format("woff");
+}
+@font-face {
+    font-family: "NoyhR-Medium";
+    src: url("../assets/fonts/NoyhR-Medium.woff") format("woff");
+}
+@font-face {
+    font-family: "NoyhR-Regular";
+    src: url("../assets/fonts/NoyhR-Regular.woff") format("woff");
+}
+@font-face {
+    font-family: "NoyhR-Heavy";
+    src: url("../assets/fonts/NoyhR-Heavy.woff") format("woff");
+}
+
+a {
+    text-decoration: none;
+}

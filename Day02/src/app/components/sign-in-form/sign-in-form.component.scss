@@ -1,0 +1,83 @@
+@import "../../variables.scss";
+
+#title {
+    font-family: "NoyhR-Medium", sans-serif;
+    font-size: 40px;
+}
+.input {
+    display: block;
+    width: 100%;
+    margin-top: 24px;
+    height: 48px;
+    padding: 0 12px;
+    border: none;
+    background-color: $primary-color5;
+    font-size: 16px;
+    outline: none;
+    &:last-child {
+        margin-left: 12px;
+    }
+    &::placeholder {
+        font-family: "NoyhR-Regular", sans-serif;
+    }
+}
+
+.container {
+    width: 400px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba($color: #fff, $alpha: 0.1);
+    padding: 30px;
+    border: $primary-color1 solid 1px;
+}
+#btn-login {
+    margin-top: 24px;
+    width: 48px;
+    height: 48px;
+    border-radius: 12px;
+    color: $primary-color3;
+    border: solid 1px $primary-color3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+
+    & > svg {
+        fill: $primary-color3;
+        scale: 1.2;
+    }
+
+    &:hover {
+        & > svg {
+            fill: $primary-color2;
+        }
+        border-color: $primary-color2;
+    }
+}
+
+#more {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-top: 24px;
+    justify-content: center;
+    align-items: center;
+}
+
+.more-link {
+    color: $primary-color2;
+    font-family: "NoyhR-Medium", sans-serif;
+    font-size: 16px;
+    cursor: pointer;
+    &:hover {
+        color: $primary-color1;
+    }
+    &:last-child {
+        margin-top: 4px;
+    }
+    border: none;
+    background-color: white;
+}
