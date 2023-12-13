@@ -14,6 +14,7 @@ import { CommonModule } from '@angular/common';
       <div class="row sm-gutter ">
         @for (product of products; track product.id) {
         <app-product
+          (buyProduct)="buyProduct($event)"
           (removeProduct)="removeProduct($event)"
           [productID]="product.id"
         ></app-product>
@@ -46,6 +47,10 @@ export class ProductsComponent {
       this.products = this.products.filter((product: any) => product.id != id);
     else alert('You need sign in');
     this.router;
+  }
+
+  buyProduct(name: string) {
+    alert(name);
   }
 
   viewDetail(id: any) {

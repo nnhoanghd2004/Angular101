@@ -37,6 +37,7 @@ import {
         <span class="info-mat">{{ product.materials }}</span>
 
         <div class="info-price">{{ product.price }}$</div>
+        <button (click)="buy(product.name)">buy</button>
       </div>
     </div>
     <!-- </div> -->
@@ -57,6 +58,8 @@ import {
 export class ProductComponent implements OnInit, AfterViewInit {
   @Input({ required: true }) productID!: string;
   @Output() removeProduct = new EventEmitter<any>();
+  @Output() buyProduct = new EventEmitter<any>();
+
   products = require('../../../assets/json/products.json');
   product: any;
 
@@ -76,5 +79,9 @@ export class ProductComponent implements OnInit, AfterViewInit {
 
   remove(id: string) {
     this.removeProduct.emit(id);
+  }
+
+  buy(name: string) {
+    this.buyProduct.emit(name);
   }
 }
