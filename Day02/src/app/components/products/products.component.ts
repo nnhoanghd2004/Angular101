@@ -1,13 +1,14 @@
+import { ProductsService } from './../../services/products/products.service';
 import { Component, ViewEncapsulation } from '@angular/core';
 import { NavbarComponent } from '../navbar/navbar.component';
-import { Router } from '@angular/router';
+import { Router, RouterLink } from '@angular/router';
 import { ProductComponent } from '../product/product.component';
 import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-products',
   standalone: true,
-  imports: [NavbarComponent, ProductComponent, CommonModule],
+  imports: [NavbarComponent, ProductComponent, CommonModule, RouterLink],
   template: `
     <app-navbar></app-navbar>
     <div id="container" class="grid">
@@ -20,12 +21,6 @@ import { CommonModule } from '@angular/common';
         ></app-product>
         } @empty {
         <div id="no-pro">No products found</div>
-        } @for (btn of btns; track $index) {
-        <ng-container
-          [ngTemplateOutlet]="btnday3"
-          [ngTemplateOutletContext]="{ name: btn }"
-        >
-        </ng-container>
         }
       </div>
     </div>
@@ -37,23 +32,22 @@ import { CommonModule } from '@angular/common';
   encapsulation: ViewEncapsulation.None,
 })
 export class ProductsComponent {
-  products = require('../../../assets/json/products.json');
+  products = this.productsService.getAllProducts();
   btns = ['A', 'B', 'C', 'D'];
 
-  constructor(private router: Router) {}
+  constructor(
+    private router: Router,
+    private productsService: ProductsService
+  ) {}
 
+  viewDetail(id: string) {
+    this.productsService.viewDetail(id);
+  }
   removeProduct(id: string) {
-    if (localStorage.getItem('isLogin'))
-      this.products = this.products.filter((product: any) => product.id != id);
-    else alert('You need sign in');
-    this.router;
+    this.productsService.removeProduct(id);
   }
 
   buyProduct(name: string) {
-    alert(name);
-  }
-
-  viewDetail(id: any) {
-    this.router.navigate(['/Product', id]);
+    this.productsService.buyProduct(name);
   }
 }
